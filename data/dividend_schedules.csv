@@ -1,0 +1,17 @@
+ticker,ex_date_years,dividend_amount,currency,frequency,notes
+AAPL,0.25,0.24,USD,quarterly,Apple quarterly dividend
+AAPL,0.5,0.24,USD,quarterly,Apple quarterly dividend
+AAPL,0.75,0.24,USD,quarterly,Apple quarterly dividend
+AAPL,1,0.24,USD,quarterly,Apple quarterly dividend
+MSFT,0.25,0.75,USD,quarterly,Microsoft quarterly dividend
+MSFT,0.5,0.75,USD,quarterly,Microsoft quarterly dividend
+MSFT,0.75,0.75,USD,quarterly,Microsoft quarterly dividend
+MSFT,1,0.75,USD,quarterly,Microsoft quarterly dividend
+JPM,0.25,1.05,USD,quarterly,JPMorgan quarterly dividend
+JPM,0.5,1.05,USD,quarterly,JPMorgan quarterly dividend
+JPM,0.75,1.05,USD,quarterly,JPMorgan quarterly dividend
+JPM,1,1.05,USD,quarterly,JPMorgan quarterly dividend
+TSLA,0.5,0,USD,none,Tesla pays no dividend
+GOOGL,0.5,0,USD,none,Google pays no dividend
+SYNTHETIC,0.5,2,USD,semi-annual,Synthetic test case from document
+SYNTHETIC,0.25,3,USD,quarterly,Large dividend early exercise test
