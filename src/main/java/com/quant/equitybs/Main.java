@@ -5,6 +5,7 @@ import com.quant.equitybs.core.DiscountCurve;
 import com.quant.equitybs.core.DividendSchedule;
 import com.quant.equitybs.model.Greeks;
 import com.quant.equitybs.pricer.AmericanPricer;
+import com.quant.equitybs.core.BinomialTree;
 
 /**
  * Main Runner - Dividend Adjusted Black Scholes Engine
@@ -119,6 +120,27 @@ public class Main {
         americanPricer.printComparison();
 
         System.out.println();
+     // ── SCENARIO 5: Binomial Tree Validation ────────────
+        System.out.println("-------------------------------------------");
+        System.out.println(" SCENARIO 5: Binomial Tree Validation");
+        System.out.println("-------------------------------------------");
+
+        // Black-Scholes price
+        double bsPrice = engine.priceContinuousYield(0.0);
+
+        // Binomial Tree price with 1000 steps for accuracy
+        BinomialTree tree = new BinomialTree(
+            spot, strike, T, rate, vol, 1000
+        );
+        double treePrice = tree.priceEuropeanCall();
+
+        // Validate: difference must be < 0.1%
+        BinomialTree.ValidationResult result =
+            BinomialTree.validate(bsPrice, treePrice);
+
+        System.out.println(result);
+        System.out.println();
+
         System.out.println("===========================================");
         System.out.println("           All Scenarios Complete!         ");
         System.out.println("===========================================");
