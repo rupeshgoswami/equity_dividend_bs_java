@@ -15,9 +15,6 @@ This engine properly adjusts pricing to handle both continuous
 dividend yield and discrete cash dividends — essential for
 accurate valuations in real trading desks.
 
-Built as part of the **15 Asset Class Wise Quantitative Finance
-Projects** series by Amit Kumar Jha, Quant Analyst at UBS.
-
 ---
 
 ## ✨ Features
