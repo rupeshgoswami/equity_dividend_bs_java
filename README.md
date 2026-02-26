@@ -1,31 +1,5 @@
 \# 📈 Dividend-Adjusted Black-Scholes Pricing Engine
 
-
-
-!\[Java](https://img.shields.io/badge/Java-17-orange)
-
-!\[Maven](https://img.shields.io/badge/Maven-3.x-blue)
-
-!\[License](https://img.shields.io/badge/License-MIT-green)
-
-!\[Status](https://img.shields.io/badge/Status-Complete-brightgreen)
-
-
-
-A production-ready quantitative finance engine implementing the
-
-Black-Scholes option pricing model with full dividend support.
-
-Built as part of the \*\*15 Asset Class Wise Quantitative Finance
-
-Projects\*\* series.
-
-
-
----
-
-
-
 \## 📌 Overview
 
 
