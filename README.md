@@ -175,7 +175,43 @@ Total Tests: 17 | Failures: 0 | Errors: 0
 BUILD SUCCESS
 -----------------------------------------------
 ```
+---
 
+## 🐳 Docker
+
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
+![AWS](https://img.shields.io/badge/AWS-EC2%20Deployed-orange)
+
+### Pull and Run instantly (No setup required!)
+docker pull rkgoswami/equity-pricing-model:v1
+docker run rkgoswami/equity-pricing-model:v1
+
+### Build Docker image locally
+docker build -t equity-pricing-model .
+docker run equity-pricing-model
+
+### DockerHub Image
+https://hub.docker.com/r/rkgoswami/equity-pricing-model
+
+---
+
+## ☁️ AWS EC2 Deployment
+
+This model is containerized with Docker and deployed on AWS EC2.
+
+### Steps to deploy on AWS EC2:
+1. Launch EC2 instance (Amazon Linux 2023, t2.micro free tier)
+2. SSH into instance:
+   ssh -i your-key.pem ec2-user@your-ec2-ip
+3. Install and start Docker:
+   sudo yum install docker -y
+   sudo service docker start
+   sudo usermod -a -G docker ec2-user
+4. Pull and run:
+   docker pull rkgoswami/equity-pricing-model:v1
+   docker run rkgoswami/equity-pricing-model:v1
+
+---
 ---
 
 ## 🛠️ Tech Stack
@@ -186,6 +222,8 @@ BUILD SUCCESS
 | Apache Commons Math | 3.6.1 | Normal distribution CDF/PDF |
 | Maven | 3.x | Build & dependency management |
 | JUnit 5 | 5.10.0 | Unit testing framework |
+| Docker | latest | Containerization |
+| AWS EC2 | t2.micro | Cloud deployment |
 
 ---
 
