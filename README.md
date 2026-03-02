@@ -183,15 +183,19 @@ BUILD SUCCESS
 ![AWS](https://img.shields.io/badge/AWS-EC2%20Deployed-orange)
 
 ### Pull and Run instantly (No setup required!)
+```bash
 docker pull rkgoswami/equity-pricing-model:v1
 docker run rkgoswami/equity-pricing-model:v1
+```
 
 ### Build Docker image locally
+```bash
 docker build -t equity-pricing-model .
 docker run equity-pricing-model
+```
 
 ### DockerHub Image
-https://hub.docker.com/r/rkgoswami/equity-pricing-model
+👉 https://hub.docker.com/r/rkgoswami/equity-pricing-model
 
 ---
 
@@ -200,18 +204,21 @@ https://hub.docker.com/r/rkgoswami/equity-pricing-model
 This model is containerized with Docker and deployed on AWS EC2.
 
 ### Steps to deploy on AWS EC2:
-1. Launch EC2 instance (Amazon Linux 2023, t2.micro free tier)
-2. SSH into instance:
-   ssh -i your-key.pem ec2-user@your-ec2-ip
-3. Install and start Docker:
-   sudo yum install docker -y
-   sudo service docker start
-   sudo usermod -a -G docker ec2-user
-4. Pull and run:
-   docker pull rkgoswami/equity-pricing-model:v1
-   docker run rkgoswami/equity-pricing-model:v1
+```bash
+# 1. Launch EC2 instance (Amazon Linux 2023, t2.micro free tier)
+# 2. SSH into instance
+ssh -i your-key.pem ec2-user@your-ec2-ip
 
----
+# 3. Install and start Docker
+sudo yum install docker -y
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+
+# 4. Pull and run
+docker pull rkgoswami/equity-pricing-model:v1
+docker run rkgoswami/equity-pricing-model:v1
+```
+
 ---
 
 ## 🛠️ Tech Stack
